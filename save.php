@@ -70,8 +70,8 @@ if ($affected_row > 0 && isset($referral_reward[ $data['url_type'] ])) {
     $device_id = $data['referrer'];
     $facebook_id = "";
 
-    $sql = "INSERT INTO master_inbox (type, header, message, data, target_device, target_fb, os, status, valid_from, valid_to)
-            VALUES ('reward', :title, :caption, :data, :target_device, :target_fb, 'All', 1, null, null)";
+    $sql = "INSERT INTO master_inbox (title, message, reward_1, target_device, target_fb, os, status, valid_from, valid_to)
+            VALUES (:title, :caption, :data, :target_device, :target_fb, 'All', 1, null, null)";
     $statement1 = $connection->prepare($sql);
     $statement1->bindParam(":title", $title);
     $statement1->bindParam(":caption", $caption);
