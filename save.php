@@ -20,10 +20,7 @@ if (trim($data['referrer']) == "") {
 }
 
 include("config.php");
-$connection = new PDO(
-    "mysql:dbname=$mydatabase;host=$myhost;port=$myport",
-    $myuser, $mypass
-);
+$connection = get_readwrite_connection();
 
 if (is_numeric($data['referrer']) && $data['referrer'] < 1223372036854775807) {
     /* 

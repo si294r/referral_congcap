@@ -1,6 +1,6 @@
 <?php
 
-include("/var/www/mysql-config2.php");
+include("/var/www/maxscale-config.php");
 
 $mydatabase = $IS_DEVELOPMENT ? "congcapdev" : "congcap";
 

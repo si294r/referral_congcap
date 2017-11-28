@@ -12,10 +12,7 @@ if (trim($data['user_id']) == "") {
 }
 
 include("config.php");
-$connection = new PDO(
-    "mysql:dbname=$mydatabase;host=$myhost;port=$myport",
-    $myuser, $mypass
-);
+$connection = get_readwrite_connection();
     
 // reset referrer
 $sql2 = "UPDATE referral "

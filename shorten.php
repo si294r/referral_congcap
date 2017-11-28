@@ -15,10 +15,7 @@ if (trim($data['device_id']) == "") {
 include("config.php");
 include_once("function.php");
 
-$connection = new PDO(
-    "mysql:dbname=$mydatabase;host=$myhost;port=$myport",
-    $myuser, $mypass
-);
+$connection = get_readwrite_connection();
 
 $user_id = get_user_id($data['device_id']);
 

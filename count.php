@@ -22,10 +22,7 @@ if (is_numeric($data['count_install']) && $data['count_install'] > -1) {
 }
 
 include("config.php");
-$connection = new PDO(
-    "mysql:dbname=$mydatabase;host=$myhost;port=$myport",
-    $myuser, $mypass
-);
+$connection = get_readonly_connection();
     
 $sql2 = "SELECT count(*) as count_install FROM referral WHERE referrer = :user_id";
 $statement2 = $connection->prepare($sql2);
