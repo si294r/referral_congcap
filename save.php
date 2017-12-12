@@ -4,7 +4,12 @@ $json = json_decode($input);
 
 $data['user_id'] = isset($json->user_id) ? $json->user_id : "";
 $data['referrer'] = isset($json->referrer) ? $json->referrer : "";
+$data['shorten_id'] = isset($json->shorten_id) ? $json->shorten_id : "";
 $data['url_type'] = isset($json->url_type) ? $json->url_type : "1"; // 4 type shorten url
+
+if (trim($data['referrer']) == "") {
+    $data['referrer'] = $data['shorten_id'];
+}
 
 if (trim($data['user_id']) == "") {
     return array(
