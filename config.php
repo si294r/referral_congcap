@@ -13,10 +13,12 @@ $SOCIAL_GRAPH_URL = "http://www.alegrium.com/sgi/2/{shorten_id.target_no}";
 
 // IN-GAME COPIES
 
-define('STR_VERIFIED_INSTALL_CRYSTALS1', "FREE CRYSTALS!");
-define('STR_VERIFIED_INSTALL_CRYSTALS2', "Your friend has installed Billionaire 2.");
-define('STR_VERIFIED_INSTALL_CASH1', "CASH REWARD!");
-define('STR_VERIFIED_INSTALL_CASH2', "Your friend has installed Billionaire 2.");
+define('STR_VERIFIED_INSTALL_CRYSTALS1', "FREE {value} CRYSTALS!");
+define('STR_VERIFIED_INSTALL_CRYSTALS2', "Thanks to you, someone played Cash, Inc.!");
+//define('STR_VERIFIED_INSTALL_CRYSTALS1', "FREE CRYSTALS!");
+//define('STR_VERIFIED_INSTALL_CRYSTALS2', "Your friend has installed Billionaire 2.");
+//define('STR_VERIFIED_INSTALL_CASH1', "CASH REWARD!");
+//define('STR_VERIFIED_INSTALL_CASH2', "Your friend has installed Billionaire 2.");
 
 define('STR_ALERT_INBOX_TITLE1', "FREE CRYSTALS!");
 define('STR_ALERT_INBOX_CAPTION1', "Boost your business now!");

@@ -59,16 +59,22 @@ if ($affected_row > 0 && isset($referral_reward[ $data['url_type'] ])) {
 
     $world = isset($row["world"]) ? $row["world"] : "1";
 
-    if ($data['url_type'] == "1" || $data['url_type'] == "3") {
-        $title = STR_VERIFIED_INSTALL_CASH1;
-        $caption = STR_VERIFIED_INSTALL_CASH2;
-        $reward = $referral_reward[ $data['url_type'] ] . "," . $world;
-    } else {
-        $title = STR_VERIFIED_INSTALL_CRYSTALS1;
-        $caption = STR_VERIFIED_INSTALL_CRYSTALS2;
-        $reward = $referral_reward[ $data['url_type'] ];
-    }
+//    if ($data['url_type'] == "1" || $data['url_type'] == "3") {
+//        $title = STR_VERIFIED_INSTALL_CASH1;
+//        $caption = STR_VERIFIED_INSTALL_CASH2;
+//        $reward = $referral_reward[ $data['url_type'] ] . "," . $world;
+//    } else {
+//        $title = STR_VERIFIED_INSTALL_CRYSTALS1;
+//        $caption = STR_VERIFIED_INSTALL_CRYSTALS2;
+//        $reward = $referral_reward[ $data['url_type'] ];
+//    }
     
+    $title = STR_VERIFIED_INSTALL_CRYSTALS1;
+    $caption = STR_VERIFIED_INSTALL_CRYSTALS2;
+    $reward = $referral_reward[ $data['url_type'] ];
+    $arr_reward = explode(",", $reward);
+    $title = str_replace("{value}", $arr_reward[0], $title);
+        
     $device_id = $data['referrer'];
     $facebook_id = "";
 
